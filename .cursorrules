@@ -1,0 +1,18 @@
+# Language & Output
+- All code, comments, and terminal print statements must be 100% in English.
+- No Turkish text anywhere in code or output.
+
+# Stack
+- Use LangGraph + LangChain conventions (StateGraph, MessagesState, ToolNode, tools_condition).
+- LLM provider: ChatGroq unless explicitly told otherwise.
+- Python 3.11+ syntax, type hints required on all function signatures.
+
+# Code Style
+- Production-grade: every function has a docstring.
+- Tool definitions use the @tool decorator pattern from langchain_core.tools.
+- State classes inherit from LangGraph's built-in MessagesState when extending state.
+- Prefer explicit node/edge naming over implicit defaults when building graphs.
+
+# Output Behavior
+- When generating multi-turn simulations, print clear visual separators (e.g. "=== TURN N ===") so terminal output is easy to read.
+- Do not omit error handling for tool calls.
